@@ -31,11 +31,11 @@ public class MappingController {
 
     /**
      * PathVariable (경로 변수) 사용
-     * 변수명이 같으면 생략 가능
+     * 변수명이 같으면 생략 가능.
      * @PathVariable("userId") String userID -> @PathVariable String userId
      * 예시 : 요청이 /mapping/userA 로 온다면?
      */
-    @GetMapping("/mapping/{userId}")
+    @GetMapping("/mapping/{userId}") // {****} 경로 변수, 혹은 placeholder. url의 특정 위치에서 동적인 값을 받기위해 사용.
     public String mappingPath(@PathVariable String userId) {
         log.info("mappingPath userId= {}", userId);
         return "ok";
