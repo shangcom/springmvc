@@ -43,13 +43,14 @@ public class ResponseBodyController {
     }
 
     /**
-     * ResponseBody : HelloData 객체를 JSON 형식으로 자동 변환하여 Httt 응답의 바디로 직접 전송
+     * '@ResponseBody' : HelloData 객체를 JSON 형식으로 자동 변환하여 Httt 응답의 바디로 직접 전송
      *
      * @return 위의 @ResponseBody와 함께 작동.
      * v1과 달리 응답 코드를 바로 설정할 수 없음.
      * 대신 @ResponseSataus 어노테이션 통해 설정.
      * 응답 코드 동적 변경 불가능. 동적으로 변경하려면 ResponseEntity 사용해야.
      */
+
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     @GetMapping("/response-body-json-v2")
